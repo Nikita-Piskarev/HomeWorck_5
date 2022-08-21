@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --grey-color: rgb(164, 168, 171);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.text-overflow {
+    /* текст в одну строчку */
+    max-width: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.article {
+    /* выставил секцию по центру задал размер */
+    width: 390px;
+    margin:100px auto 0 auto;
+}
+
+.section {
+    /* задал внутрение отступ цвет и закругления краям */
+    padding: 30px 20px;
+    background-color: rgb(226, 238, 233);
+    border-radius: 3px;
+}
+
+.section__title {
+    /* заголовок */
+    color: rgb(84, 77, 77);
+    font-size: 2em;
+    position: relative;
+}
+
+.section__title:before,
+.section__title:after {
+    /* сделал полосы */
+    content: "";
+    border-bottom: 1px solid rgb(136, 151, 151);
+    width: 28%;
+    height: 0.5em;
+    position: absolute;
+    top: 0px;
+}
+
+.section__title:before {
+    /* левая */
+    margin-left: -30%;
+}
+
+.section__title:after {
+    /* правая */
+    margin-left: 10px;
+}
+
+.section__paragraph {
+    /* обращение к пораграфам которые находяться в нутри дива */
+    margin: 15px 0 0 0;
+    color: var(--grey-color);
+    font-size: 14px;
+}
+
+.section__form {
+    /* задал флекс блок форме для правильной и красивой расстановке блоков которые будут в нутри нее */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 400px;
+}
+
+.section__form input{
+    /* бурал стандартные стили при наведении на поле */
+    padding: 10px;
+    outline: none;
+}
+
+.section__form-label-name{
+    /* обращение к первым 2 полям которые находяться в блоке label */
+    display: flex;
+    justify-content: space-between;
+}
+
+.section__form-checkbox {
+    /* сказал чек боксу ставать сначала */
+    color: var(--grey-color);
+    align-self: flex-start;
+}
+
+.section__form-link {
+    /* обращение к сылкам которые находяться в спане запись о там что открывать в новом окне в html */
+    color: rgb(12, 181, 54);
+    text-decoration: none;
+}
+
+.button {
+    /* кнопка */
+    font-weight: bold;
+    color: white;
+    background-color: rgb(50, 170, 50);
+    border: none;
+    border-radius: 2px;
+    font-size: 17px;
+}
+
+::placeholder {
+    /* с помощью свойства задаю цвет подсказкам которые в нутри поля ввода */
+    color:var(--grey-color);
+}
